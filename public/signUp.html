@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+             .hii {
+            border-radius: 5%;
+            border: 30 black thick;
+        }
+        td {
+                margin: 15px;
+            }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Sign Up Page</h1>
+        <form action="/signUp" method="GET">
+            <table>
+                <tr>
+                    <td>Enter Email Id :</td>
+                    <td><input type="email" name="email" class="hii"></td>
+                </tr>
+                <tr>
+                    <td>Enter Name</td>
+                    <td><input type="text" name="name" class="hii"></td>
+                </tr>
+                <tr>
+                    <td>Enter Password</td>
+                    <td><input type="password" name="pass" class="hii"></td>
+                </tr>
+                <tr>
+                    <td>Select Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="male" class="hii">Male <br>
+                        <input type="radio" name="gender" value="female" class="=hii">Female <br>
+                        <input type="radio" name="gender" value="other" class="hii"> Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies :</td>
+                    <td><textarea  type="text" rows="4" cols="50" name="hobbies" placeholder="Enter Your Hobbies..." class="hii"></textarea></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td></td>
+                </tr>
+            </table>
+            <button type="submit" style=" background-color: blue;;font-family: cursive; margin-top: 5px; margin-bottom: 10px; color: white; border-radius: 2px;width: 100px;border-color: transparent;" class="btn">signUp</button><br> <br>
+            Already Have An Account ?<a href="index.html">Click Here</a>
+        </form>
+    </center>
+</body>
+</html>
