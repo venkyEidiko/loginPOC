@@ -18,7 +18,7 @@ router.get('/signUp', function (req, res) {
  } ) .catch(error=> console.log(error))
 })
 //login 
-router.get('/findPerson',function(req,res)
+router.get('/find',function(req,res)
 {
     console.log("Inside login get "+req.query.email +req.query.pass)
     const getStatus=person.find(req.query.email,req.query.pass)
@@ -31,7 +31,7 @@ router.get('/update',function(req,res)
 {
     console.log("Inside update get "+req.query.email)
     const updateStatus=person.update(req.query.email,req.query.name,req.query.gender,req.query.hobbies)
- updateStatus.then(result=>{res.render('login' ,{msg:result})})
+ updateStatus.then(result=>{res.render('updated' ,{msg:result})})
   .catch(error=> console.log(error))
 
 })
