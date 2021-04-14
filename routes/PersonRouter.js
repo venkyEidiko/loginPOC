@@ -31,7 +31,7 @@ router.get('/update',function(req,res)
 {
     console.log("Inside update get "+req.query.email)
     const updateStatus=person.update(req.query.email,req.query.name,req.query.gender,req.query.hobbies)
- updateStatus.then(result=>{res.render('updated' ,{msg:result})})
+ updateStatus.then(result=>{res.render('login' ,{msg:result})})
   .catch(error=> console.log(error))
 
 })
