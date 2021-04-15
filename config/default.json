@@ -7,10 +7,10 @@
         "port": 27017,
         "name": "person"
     },
-    "auth":{
+    "mail":{
         
-        "mail":"thewhitedevil404@gmail.com",
-        "pass":"sarasu10"
+        "from":"thewhitedevil404@gmail.com",
+        "password":"sarasu10"
     }
     
 }

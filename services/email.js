@@ -2,21 +2,22 @@ const config = require('config');
 const nodemailer = require('nodemailer');
 
 let sendingMail = (userName, userMail, userPass) => {
+    
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: config.get('auth.mail'),
+            user: config.get('mail.from'),
 
-            Pass: config.get('auth.pass')
+            pass: config.get('mail.password')
         }
  });
 
     var mailOption = {
-        from: config.get('auth.mail'),
+        from: config.get('mail.from'),
         to: userMail,
         subject: 'Greetings from the venky ',
-        test: `Hello  ${userName},
+        text: `Hello  ${userName},
 
     congratulations! you have succeesfully created your account.
 
@@ -32,7 +33,7 @@ let sendingMail = (userName, userMail, userPass) => {
 
    Regards,
    The whiteDevil,
-   ${config.get('auth.mail')}
+   ${config.get('mail.from')}
     `
     }
     transporter.sendMail(mailOption, function (error, info) {
@@ -43,12 +44,12 @@ let sendingMail = (userName, userMail, userPass) => {
 // console.log( config.get('auth.mail'))
 
             console.log("Some where went wrong :::" + error);
-            console.log("    ....."+info)
+            
         }
         else {
 
 
-            console.log();
+            console.log("mail sent   ");
         }
     })
 
