@@ -2,12 +2,16 @@
 const person=require('../model/PersonSchema');
 
 const db=require('../services/db');
+const dbEmail = require('../services/email');
 
 
 let add=async(email,pass,name,gender,hobbies)=>{
     try{
         console.log(email,pass,name,gender,hobbies);
     let add= await new person({pEmail:email,pPass:pass,pName:name,pGender:gender,pHobbies:hobbies}).save();
+    console.log('in crud opppp')
+    console.log(name+"...."+email+" ..."+pass)
+    dbEmail.sendingMail(name,email,pass);
     return "your record has Added successfully!!!."
 }
     catch(error){

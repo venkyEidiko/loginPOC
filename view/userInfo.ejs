@@ -9,12 +9,13 @@
 <body>
     
     <center>
-        <h1>Update Form</h1>
+        <!-- <h1>Update Form</h1> -->
         <%=userInfo.length%>
         <%if(userInfo.length>0)
             {
              userInfo.forEach(function(info){%>
                 <form action="/update" method="GET">
+                    <h1>Kindly update your Details!</h1>
         <table>
            
             <tr>
@@ -44,7 +45,31 @@
         <a href="index.html">LogOut</a>
                 </form>
         <%})}else{%>
-            <h1>No Data Found</h1>
+            
+            <center>
+                <form action="/find" method="GET">
+                    <h1 style="font-style: italic;">OOOOPS!!!!     your mail or password in-correct</h1>
+                    <h3>Re-Enter your Email and password</h3>
+                    <div class="container">
+        <table>
+           
+            <tr>
+                <td>Enter Your Mail :</td>
+                <td><input type="email" name="email" required class="hii"></td><br>
+            </tr>
+            <tr>
+                <td>Enter Your Password :</td>
+                <td><input type="password" name="pass" required  class="hii"></td><br>
+            </tr>
+        </table>
+                    </div><br><br>
+                    <button type="submit" style=" background-color: blue;;font-family: cursive; margin-top: 5px; margin-bottom: 10px; color: white; border-radius: 2px;width: 100px;border-color: transparent;" class="btn">Submit</button> <br> <br><br>
+                   No Account ? <a href="signUp.html">Sign Up</a>
+                </form>
+            </center>
+
+
+
             <%}%>
     </center>
 </body>

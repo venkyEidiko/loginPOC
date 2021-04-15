@@ -6,5 +6,11 @@
         "host": "localhost",
         "port": 27017,
         "name": "person"
+    },
+    "auth":{
+        
+        "mail":"thewhitedevil404@gmail.com",
+        "pass":"sarasu10"
     }
+    
 }
